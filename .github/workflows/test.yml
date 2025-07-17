@@ -35,5 +35,4 @@ jobs:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
         run: |
-          databricks configure --token <<< "$DATABRICKS_HOST\n$DATABRICKS_TOKEN"
           databricks runs submit --json-file run_notebook.json
