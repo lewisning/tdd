@@ -23,4 +23,6 @@ jobs:
           pip install pytest findspark
 
       - name: Run PySpark tests
-        run: pytest tests/
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          pytest tests/
